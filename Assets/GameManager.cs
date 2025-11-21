@@ -13,12 +13,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameHasEnded && !sceneHasStopped)
+       if (gameHasEnded && !sceneHasStopped)
         {
             StartCoroutine(RestartScene());
             return;
         }
-
+        
     }
 
     public void GameOver()
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     IEnumerator RestartScene()
     {
         sceneHasStopped = true;
-        [SerializeField]yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(0.1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

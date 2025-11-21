@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     IEnumerator RestartScene()
     {
         sceneHasStopped = true;
-        yield return new WaitForSeconds(2);
+        [SerializeField]yield return new WaitForSeconds(0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
